@@ -119,9 +119,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'recipesWebsite','static')
-]
+
+# Ao usar o comando 'py manage.py collectstatic', o django
+# vai automaticamente pegar todos os arquivos estaticos que
+# você criou e colar na pasta abaixo (STATIC_ROOT).
+# OBS: IMPORTANTE USAR NAMESPACING (CRIAR PASTAS COM NOMES
+# DIFERENTES) PARA EVITAR COLISÃO DE ARQUIVOS COM MESMO NOME
+STATIC_ROOT = BASE_DIR / 'static'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

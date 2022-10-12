@@ -2,14 +2,17 @@
 
 <body>
   {% include 'recipeswebsite/partials/pageheader.html'%}
-
-  <div class="search-container">
-    <div class="container">
-      <form action="" class="search-form">
-        <input type="search" class="search-input" name="search">
-        <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
-      </form>
+  {% include 'recipeswebsite/partials/search-bar.html'%}
+  
+  <main class=" main-content-container">
+    <div class="main-content main-content-list container">
+      {% include 'recipeswebsite/partials/recipes.html'%}
+      {% include 'recipeswebsite/partials/recipes.html'%}
+      {% include 'recipeswebsite/partials/recipes.html'%}
+      {% include 'recipeswebsite/partials/recipes.html'%}
     </div>
-  </div>
+  </main>
+
+  {% include 'recipeswebsite/partials/footer.html'%}
 </body>
 </html>
